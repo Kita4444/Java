@@ -6,12 +6,11 @@ public class Template
   {
       // Create a Scanner object to read input.
       Scanner keyboard = new Scanner(System.in);
+
+      System.out.println("Welcome back");
+
+
   }
-  
-
-
-
-
 
 
 }
