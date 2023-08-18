@@ -35,11 +35,11 @@ public class MultipleChoiceTest {
         
         boolean test_passed = test_passed(total_answers_correct);
 
-        Display_Results(total_answers_correct, total_answers_incorrect, total_answer_missed,
+        display_results(total_answers_correct, total_answers_incorrect, total_answer_missed,
                        correct_answers, incorrect_answers, answers_missed, test_passed);
     }
     
-    public static void Display_Results(int total_answers_correct, int total_answers_incorrect, int total_answer_missed,
+    public static void display_results(int total_answers_correct, int total_answers_incorrect, int total_answer_missed,
                                       int[] correct_answers, int[] incorrect_answers,
                                       int[] answers_missed, boolean test_passed) {
 
@@ -83,14 +83,14 @@ public class MultipleChoiceTest {
     }
     
     public static boolean answer_is_valid(char answer) {
-        char lowercaseAnswer = answer;
+        char lower_case_answer = answer;
         if (answer >= 'A' && answer <= 'Z') 
         {
-            lowercaseAnswer = (char) (answer - 'A' + 'a');
+            lower_case_answer = (char) (answer - 'A' + 'a');
         }
-        return lowercaseAnswer == 'a' || lowercaseAnswer == 'b' ||
-               lowercaseAnswer == 'c' || lowercaseAnswer == 'd' ||
-               lowercaseAnswer == 'e' || lowercaseAnswer == 'x';
+        return lower_case_answer == 'a' || lower_case_answer == 'b' ||
+               lower_case_answer == 'c' || lower_case_answer == 'd' ||
+               lower_case_answer == 'e' || lower_case_answer == 'x';
     }
 
     public static char[] create_user_answers(Scanner scanner) {
